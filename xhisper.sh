@@ -127,7 +127,7 @@ stt_api_key=""
 stt_model=""
 llm_url="https://api.groq.com/openai/v1"
 llm_api_key=""
-llm_model="llama-3.3-70b-versatile"
+llm_model="openai/gpt-oss-120b"
 
 CONFIG_DIR="${XDG_CONFIG_HOME:-$HOME/.config}/xhisper"
 CONFIG_FILE="$CONFIG_DIR/xhisperrc"
@@ -457,7 +457,7 @@ auto_edit_text() {
       ],
       temperature: 0.2
     }')" \
-    | jq -r '.choices[0].message.content')
+    | jq -r '.choices[0].message.content // empty')
 
   logging_end_and_write_to_logfile "Auto-edit" "$edited" "$logging_start"
   echo "$edited"

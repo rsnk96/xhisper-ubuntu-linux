@@ -44,7 +44,7 @@ tone-adaptation  : true
 # LLM (auto-edit):
 # llm-url     : https://api.groq.com/openai/v1
 # llm-api-key :
-# llm-model   : llama-3.3-70b-versatile
+# llm-model   : openai/gpt-oss-120b
 #
 # Local Whisper example (whisper.cpp server):
 # stt-url     : http://localhost:8080/v1
